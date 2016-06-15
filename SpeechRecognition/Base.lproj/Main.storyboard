@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11129.15" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11103.10"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SpeechRecognition" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Ready to record!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5tp-vy-m9D">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.80000000000000004" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JsB-Tl-SUz" userLabel="Record Toolbar">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mp8-KX-3fR">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <state key="normal" title="Record">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="recordButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="RJH-EB-9xl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.20000000000000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="GY1-Be-e2m"/>
+                                    <constraint firstItem="mp8-KX-3fR" firstAttribute="centerY" secondItem="JsB-Tl-SUz" secondAttribute="centerY" id="OUh-tK-AVH"/>
+                                    <constraint firstItem="mp8-KX-3fR" firstAttribute="centerX" secondItem="JsB-Tl-SUz" secondAttribute="centerX" id="Ysm-Ck-F44"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JsB-Tl-SUz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0hG-P2-Ycp"/>
+                            <constraint firstAttribute="trailing" secondItem="JsB-Tl-SUz" secondAttribute="trailing" id="6gp-of-nlq"/>
+                            <constraint firstItem="5tp-vy-m9D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="FnN-2j-0Y5"/>
+                            <constraint firstItem="5tp-vy-m9D" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="fQo-uT-1uw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5tp-vy-m9D" secondAttribute="trailing" id="gYr-2j-Jri"/>
+                            <constraint firstItem="JsB-Tl-SUz" firstAttribute="top" secondItem="5tp-vy-m9D" secondAttribute="bottom" id="sSw-Dj-TXU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JsB-Tl-SUz" secondAttribute="bottom" id="uc0-UL-Bza"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="recordButton" destination="mp8-KX-3fR" id="4WU-Xi-PQB"/>
+                        <outlet property="transcriptTextView" destination="5tp-vy-m9D" id="CDy-EY-8oM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="125.4872563718141"/>
+        </scene>
+    </scenes>
+</document>
